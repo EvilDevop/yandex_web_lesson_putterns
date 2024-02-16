@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% for el in list %}
+        {% if not loop.last %}
+            <h4>{{ el }}: {{ list[el] }}</h4>
+        {% else %}
+            <h4>{{ el }} {{ list[el] }}</h4>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
