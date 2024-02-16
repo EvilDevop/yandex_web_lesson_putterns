@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if list == 'ol' %}
+        <h2>Список профессий</h2>
+        <ol>
+        {% for prof in prof_list['profs'] %}
+            <li>{{ prof }}</li>
+        {% endfor %}
+        </ol>
+    {% elif list == 'ul' %}
+        <h2>Список профессий</h2>
+        <ul>
+        {% for prof in prof_list['profs'] %}
+            <li>{{ prof }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <div class="p-3 mb-2 bg-danger text-white">Введен неверный параметр</div>>
+    {% endif %}
+{% endblock %}
